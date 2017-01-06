@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dogui.FXMLDocumentController">
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Label text="Move all " />
+            <ComboBox fx:id="extensionsCB" prefWidth="150.0" promptText="Select an extension" />
+            <Label text="to" />
+            <ComboBox fx:id="destinationCB" prefWidth="150.0" promptText="Select a folder" />
+            <Button fx:id="applyBTN" mnemonicParsing="false" onAction="#moveFiles" text="Apply" />
+            <Label fx:id="statusLB" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="140.0" text="Status" textAlignment="JUSTIFY" textFill="#14a333" />
+        </items>
+      </ToolBar>
+   </bottom>
+   <top>
+      <ToolBar prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+            <Label text="Create a new folder :" />
+            <TextField fx:id="newFolderName" />
+          <Button fx:id="createFolderBtn" mnemonicParsing="false" onAction="#createFolder" text="Create Folder" />
+        </items>
+      </ToolBar>
+   </top>
+   <left>
+      <TreeView fx:id="allFiles" prefHeight="325.0" prefWidth="304.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <TreeView fx:id="allFolders" prefHeight="325.0" prefWidth="287.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
